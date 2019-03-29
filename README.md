@@ -1,4 +1,5 @@
 # flutter_ds
+<<<<<<< HEAD
 
 Data Structure with Flutter.
 
@@ -14,3 +15,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our 
 [online documentation](https://flutter.io/docs), which offers tutorials, 
 samples, guidance on mobile development, and a full API reference.
+=======
+ Data Structure with Flutter.
+>>>>>>> 7e12fb480cfc2f19668f1a7d61fa99adfe53f691
