@@ -26,38 +26,39 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Home'),
+      appBar: AppBar(
+        title: Text('Home'),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            RaisedButton(
+              child: Text('Page1'),
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => Page1(),
+                    settings: RouteSettings(arguments: 'hello page1'),
+                  ),
+                );
+              },
+            ),
+            RaisedButton(
+              child: Text('Page2'),
+              onPressed: () {
+                Navigator.pushNamed(
+                  context,
+                  '/page2',
+                  arguments: 'hello page2',
+                );
+              },
+            ),
+          ],
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              RaisedButton(
-                child: Text('Page1'),
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => Page1(),
-                      settings: RouteSettings(arguments: 'hello page1'),
-                    ),
-                  );
-                },
-              ),
-              RaisedButton(
-                child: Text('Page2'),
-                onPressed: () {
-                  Navigator.pushNamed(
-                    context,
-                    '/page2',
-                    arguments: 'hello page2',
-                  );
-                },
-              )
-            ],
-          ),
-        ));
+      ),
+    );
   }
 }
 
@@ -69,7 +70,9 @@ class Page1 extends StatelessWidget {
       appBar: AppBar(
         title: Text('Page1'),
       ),
-      body: Center(child: Text(args)),
+      body: Center(
+        child: Text(args),
+      ),
     );
   }
 }
